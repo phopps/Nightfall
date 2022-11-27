@@ -158,3 +158,30 @@ MIT
 - [ ] [Making your first Phaser 3 game](https://phaser.io/tutorials/making-your-first-phaser-3-game/part1)
 - [ ] Create MVP for game jam
   - [ ] GitHub issues, branches, collaborators
+- [ ] animations
+- [ ] audio
+- [ ] background music (bgm)
+- [ ] color pallette (spelling?)
+- [ ] database?
+- [ ] extra levels
+- [ ] game control instructions
+- [ ] gamepad controller support
+- [ ] github repo
+- [ ] http-server?
+- [ ] images
+- [ ] keyboard support
+- [ ] lore
+- [ ] main level
+- [ ] main menu
+- [ ] mouse support
+- [ ] npcs
+- [ ] package.json
+- [ ] pause menu
+- [ ] phaser code/editor instructions
+- [ ] player character
+- [ ] player sounds
+- [ ] readme
+- [ ] screen size support
+- [ ] settings menu
+- [ ] style guide
+- [ ] subtitles
