@@ -1,63 +1,26 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>Nightfall</title>
-  <!-- Pull in a build of Phaser 3 using a script tag -->
-  <script src="https://cdn.jsdelivr.net/npm/phaser@3.51.0/dist/phaser-arcade-physics.min.js">
-  </script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Nightfall</title>
+
+	<script src="https://cdn.jsdelivr.net/npm/phaser@3.55.1/dist/phaser.min.js"></script>
+	<script src="main.js"></script>
+
+	<style>
+		body {
+			background: black;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+
 </head>
 
 <body>
-  <script>
-    // Note that `config` is a pretty standard Phaser 3 Game Configuration object.
-    var config = {
-      // We tell `config` to use the WebGL renderer if it can, set the canvas to a size of 800x600 pixels, enable Arcade Physics, and finally call the `preload` and `create` functions.
-      type: Phaser.AUTO,
-      width: 800,
-      height: 600,
-      physics: {
-        default: 'arcade',
-        arcade: {
-          gravity: { y: 200 }
-        }
-      },
-      scene: {
-        preload: preload,
-        create: create
-      }
-    };
-    // Note that `game` is a Phaser Game instance that uses our configuration object `config`.
-    var game = new Phaser.Game(config);
-    // The `preload` function helps you easily load assets into your game.
-    function preload() {
-      // In `preload`, we set the Base URL to be the Phaser server and load 3 PNG files.
-      this.load.setBaseURL('https://labs.phaser.io');
-      this.load.image('sky', 'assets/skies/space3.png');
-      this.load.image('logo', 'assets/sprites/phaser3-logo.png');
-      this.load.image('red', 'assets/particles/red.png');
-    }
-    // After creating the emitter, we add a logo image called logo.
-    function create() {
-      // Add a sky image into the game and create a Particle Emitter.
-      this.add.image(400, 300, 'sky');
-      var particles = this.add.particles('red');
-      var emitter = particles.createEmitter({
-        speed: 100,
-        // The scale value means that the particles will initially be large and will shrink to nothing as their lifespan progresses.
-        scale: { start: 1, end: 0 },
-        blendMode: 'ADD'
-      });
-      // Since logo is a Physics Image, logo is given a physics body by default.
-      var logo = this.physics.add.image(400, 100, 'logo');
-      // We set some properties for logo: velocity, bounce (or restitution), and collision with the world bounds. These properties will make our logo bounce around the screen.
-      logo.setVelocity(100, 200);
-      logo.setBounce(1, 1);
-      logo.setCollideWorldBounds(true);
-      // Finally, we tell the particle emitter to follow the logo - so as the logo moves, the particles will flow from it.
-      emitter.startFollow(logo);
-    }
-  </script>
 </body>
 
 </html>

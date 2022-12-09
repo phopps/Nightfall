@@ -1,0 +1,120 @@
+{
+    "components": [
+        {
+            "name": "StartSceneOnClick",
+            "baseClass": "EventComponent",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": [
+                {
+                    "name": "sceneKey",
+                    "label": "Scene Key",
+                    "tooltip": "The key of the scene.",
+                    "defValue": "",
+                    "type": {
+                        "id": "asset-key"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "OpenURLOnClick",
+            "baseClass": "",
+            "gameObjectType": "Phaser.GameObjects.GameObject",
+            "properties": [
+                {
+                    "name": "url",
+                    "label": "URL",
+                    "tooltip": "The URL to open when the object is clicked.",
+                    "defValue": "",
+                    "type": {
+                        "id": "string"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "InteractiveObject",
+            "baseClass": "",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": []
+        },
+        {
+            "name": "Checkbox",
+            "baseClass": "EventComponent",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": [
+                {
+                    "name": "checked",
+                    "label": "Checked",
+                    "tooltip": "If the object has the checked state",
+                    "defValue": true,
+                    "type": {
+                        "id": "boolean"
+                    }
+                },
+                {
+                    "name": "checkedTexture",
+                    "label": "Checked Texture",
+                    "tooltip": "The texture frame key to show when the object is checked",
+                    "defValue": "",
+                    "type": {
+                        "id": "texture-config"
+                    }
+                },
+                {
+                    "name": "unckeckedTexture",
+                    "label": "Unchecked Texture",
+                    "tooltip": "The frame key of the texture to show when the object is unchecked.",
+                    "defValue": "",
+                    "type": {
+                        "id": "texture-config"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "PushOnClick",
+            "baseClass": "EventComponent",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": []
+        },
+        {
+            "name": "FloatingObject",
+            "baseClass": "EventComponent",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": [
+                {
+                    "name": "offset",
+                    "label": "Offset",
+                    "tooltip": "The vertical offset to move the object.",
+                    "defValue": 20,
+                    "type": {
+                        "id": "number"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "ClickHandler",
+            "baseClass": "",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": [
+                {
+                    "name": "callback",
+                    "label": "Callback",
+                    "tooltip": "On click callback",
+                    "defValue": "",
+                    "type": {
+                        "id": "expression",
+                        "expressionType": "()=>void"
+                    }
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - Object Script Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType"
+    }
+}
